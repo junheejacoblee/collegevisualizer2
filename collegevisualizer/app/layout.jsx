@@ -2,6 +2,7 @@ import './globals.css';
 import Link from 'next/link';
 import NavLinks from '../components/NavLinks';
 import ThemeToggle from '../components/ThemeToggle';
+import Script from 'next/script';
 import ThemeProvider from '../components/ThemeProvider';
 
 export const metadata = {
