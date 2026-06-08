@@ -2,7 +2,6 @@ import './globals.css';
 import Link from 'next/link';
 import NavLinks from '../components/NavLinks';
 import ThemeToggle from '../components/ThemeToggle';
-import Script from 'next/script';
 import ThemeProvider from '../components/ThemeProvider';
 
 export const metadata = {
@@ -40,20 +39,6 @@ export default function RootLayout({ children }) {
         <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
       </head>
       <body>
-        {/* Google Analytics */}
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-70FXFDZ65C"
-          strategy="afterInteractive"
-        />
-
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-70FXFDZ65C');
-          `}
-        </Script>
         <ThemeProvider>
           <nav style={{
             background: 'var(--surface)',
@@ -74,9 +59,11 @@ export default function RootLayout({ children }) {
               flexShrink: 0,
               textDecoration: 'none',
             }}>
-              {/* Δ delta — smooth rounded triangle, matches favicon */}
-              <svg width="15" height="15" viewBox="0 0 32 32" fill="none" style={{ flexShrink: 0 }}>
-                <polygon points="16,7 5.5,25 26.5,25" fill="none" stroke="var(--accent)" strokeWidth="2" strokeLinejoin="round" strokeLinecap="round"/>
+              {/* Ξ xi — three horizontal lines */}
+              <svg width="15" height="15" viewBox="0 0 32 32" style={{ flexShrink: 0 }}>
+                <line x1="7" y1="9" x2="25" y2="9" stroke="var(--accent)" strokeWidth="2.2" strokeLinecap="round"/>
+                <line x1="9" y1="16" x2="23" y2="16" stroke="var(--accent)" strokeWidth="2.2" strokeLinecap="round"/>
+                <line x1="7" y1="23" x2="25" y2="23" stroke="var(--accent)" strokeWidth="2.2" strokeLinecap="round"/>
               </svg>
               <span style={{
                 fontFamily: "'JetBrains Mono', monospace",
