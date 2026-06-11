@@ -1,4 +1,5 @@
 import './globals.css';
+import { Analytics } from "@vercel/analytics/next"
 import Link from 'next/link';
 import NavLinks from '../components/NavLinks';
 import ThemeToggle from '../components/ThemeToggle';
