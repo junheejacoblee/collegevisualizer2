@@ -7,9 +7,6 @@ import ThemeProvider from '../components/ThemeProvider';
 export const metadata = {
   title: { default: 'College Visualizer', template: '%s | College Visualizer' },
   description: 'Explore admissions, costs, earnings, and application requirements for 1,400+ U.S. colleges.',
-};
-export const metadata = {
-  // ...existing metadata...
   icons: {
     icon: [
       { url: '/favicon-48.png', sizes: '48x48', type: 'image/png' },
@@ -19,6 +16,7 @@ export const metadata = {
     ],
   },
 };
+
 // Uniform-stroke capital Λ — equal width arms, like a sans-serif capital lambda
 // Built as a path with consistent stroke weight throughout
 const LogoMark = ({ size = 20 }) => (
