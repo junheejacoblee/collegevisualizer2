@@ -1,5 +1,4 @@
 import './globals.css';
-import { Analytics } from "@vercel/analytics/next"
 import Link from 'next/link';
 import NavLinks from '../components/NavLinks';
 import ThemeToggle from '../components/ThemeToggle';
@@ -9,7 +8,17 @@ export const metadata = {
   title: { default: 'College Visualizer', template: '%s | College Visualizer' },
   description: 'Explore admissions, costs, earnings, and application requirements for 1,400+ U.S. colleges.',
 };
-
+export const metadata = {
+  // ...existing metadata...
+  icons: {
+    icon: [
+      { url: '/favicon-48.png', sizes: '48x48', type: 'image/png' },
+      { url: '/favicon-96.png', sizes: '96x96', type: 'image/png' },
+      { url: '/favicon-192.png', sizes: '192x192', type: 'image/png' },
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+    ],
+  },
+};
 // Uniform-stroke capital Λ — equal width arms, like a sans-serif capital lambda
 // Built as a path with consistent stroke weight throughout
 const LogoMark = ({ size = 20 }) => (
